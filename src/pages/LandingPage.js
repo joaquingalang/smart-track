@@ -7,7 +7,7 @@ import brownSquiggle from "../assets/brown-squiggle.png";
 function LandingPage() {
   const navigate = useNavigate();
 
-  function handleLogin(e) {
+  function navigateToLogin(e) {
     e.preventDefault();
     navigate("/login");
   }
@@ -32,7 +32,7 @@ function LandingPage() {
           adding, editing, deleting, and reporting records in one intuitive
           dashboard. Designed for efficiency, built for clarity.
         </p>
-        <button className="dashboard-btn borel-regular" onClick={handleLogin}>
+        <button className="dashboard-btn borel-regular" onClick={navigateToLogin}>
           <p>Go to Dashboard</p>
         </button>
       </div>
