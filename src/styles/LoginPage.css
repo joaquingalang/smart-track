@@ -1,0 +1,87 @@
+.borel-regular {
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title-lg {
+  color: #5E503F;
+  font-size: 86.89px;
+  font-weight: 800;
+}
+
+.body-md {
+  color: #B29A80;
+  font-size: 23.49px;
+}
+
+.login-text-field {
+  width: 380px;
+  height: 86px;
+  border: 1px solid #0A0908;
+  border-radius: 28px;
+  box-sizing: border-box;
+  background: transparent;
+  padding: 0 20px; 
+  font-size: 16px;
+  margin-bottom: 17px;
+}
+
+.dashboard-btn {
+  width: 380px;
+  height: 86px;
+  border: none;
+  border-radius: 28px;
+  background-color: #0A0908;
+}
+
+.dashboard-btn p {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.db-img {
+    position: absolute;
+    top: 290px;
+    right: 45px;;
+}
+
+.db-img img {
+    width: 579px;
+}
+
+.blue-asterisk {
+    position: absolute;
+    top: 700px;
+    right: 700px;
+    animation: spin 4s linear infinite;
+}
+
+.blue-asterisk img {
+    width: 120px;
+}
+
+.brown-squiggle {
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    animation: tilt 4s linear infinite;
+}
+
+.brown-squiggle img {
+    width: 300px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes tilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-30deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(30deg); }
+    100% { transform: rotate(0deg); }
+}
