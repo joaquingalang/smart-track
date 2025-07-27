@@ -29,6 +29,14 @@ function Sidebar({view, onSelect}) {
                     <img src={deleteIconImg} alt="Delete"/>
                     <p className="delius-regular">Delete</p>
                 </div>
+                {/* Move logout outside sidebar-content for flex alignment */}
+            </div>
+            <div 
+                onClick={() => onSelect("logout")} 
+                className={"crud-option logout-option" + (view == "logout" ? " selected" : "")}
+            >
+                <img src={deleteIconImg} alt="Logout"/>
+                <p className="delius-regular">Logout</p>
             </div>
         </div>
     );
