@@ -1,12 +1,19 @@
-import '../styles/LandingPage.css';
-import '../styles/Fonts.css';
-import databaseImg from '../assets/database.png'
-import blueAsteriskImg from '../assets/blue-asterisk.png';
-import brownSquiggle from '../assets/brown-squiggle.png';
+import "../styles/LandingPage.css";
+import { useNavigate } from "react-router-dom";
+import databaseImg from "../assets/database.png";
+import blueAsteriskImg from "../assets/blue-asterisk.png";
+import brownSquiggle from "../assets/brown-squiggle.png";
 
 function LandingPage() {
-    return (
-        <div>
+  const navigate = useNavigate();
+
+  function navigateToLogin(e) {
+    e.preventDefault();
+    navigate("/login");
+  }
+
+  return (
+    <div>
             <div className="db-img">
                 <img src={databaseImg}></img>
             </div>
@@ -24,7 +31,7 @@ function LandingPage() {
                 </button>
             </div>
         </div>
-    );
+  );
 }
 
 export default LandingPage;
