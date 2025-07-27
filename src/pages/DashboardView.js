@@ -25,7 +25,7 @@ function DashboardView() {
     <div className="dashboard-view">
         <div className="view-header delius-regular">
             <h1>All Records</h1>
-            <h1>4</h1>
+            <h1>{employees.length}</h1>
         </div>
         <RecordTable employees={employees} />
     </div>
