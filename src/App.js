@@ -1,9 +1,12 @@
 import LandingPage from "./pages/LandingPage";
+import DashboardPage from "./pages/DashboardPage";
+import './index.css';
 
 function App() {
   return (
     <div className="app-border">
-      <LandingPage></LandingPage>
+      <DashboardPage></DashboardPage>
+      {/* <LandingPage></LandingPage> */}
     </div>
   );
 }
