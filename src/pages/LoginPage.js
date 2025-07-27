@@ -27,32 +27,32 @@ function LoginPage() {
             </div>
       <div className="content">
         <h1 className="title-lg tilt-warp-regular">Log In</h1>
-        <p className="body-md borel-regular">
+        <p className="body-md delius-regular">
           Please enter your credentials to access the dashboard.
         </p>
           <form>
             <input
               type="text"
-              class="login-text-field body-md borel-regular"
+              class="login-text-field body-md delius-regular"
               placeholder="Username"
             />
           </form>
           <form>
             <input
               type="text"
-              class="login-text-field body-md borel-regular"
+              class="login-text-field body-md delius-regular"
               placeholder="Email"
             />
           </form>
           <form>
             <input
               type="password"
-              class="login-text-field body-md borel-regular"
+              class="login-text-field body-md delius-regular"
               placeholder="Password"
             />
           </form>
 
-        <button className="dashboard-btn borel-regular" onClick={navigateToLanding}>
+        <button className="login-btn delius-regular" onClick={navigateToLanding}>
           <p>Log In</p>
         </button>
       </div>

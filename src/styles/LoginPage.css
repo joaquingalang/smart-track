@@ -13,13 +13,15 @@
 .body-md {
   color: #B29A80;
   font-size: 23.49px;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
 }
 
 .login-text-field {
   width: 380px;
-  height: 86px;
+  height: 4rem;
   border: 1px solid #0A0908;
-  border-radius: 28px;
+  border-radius: 20px;
   box-sizing: border-box;
   background: transparent;
   padding: 0 20px; 
@@ -27,18 +29,18 @@
   margin-bottom: 17px;
 }
 
-.dashboard-btn {
+.login-btn {
   width: 380px;
-  height: 86px;
+  height: 4rem;
   border: none;
-  border-radius: 28px;
+  border-radius: 20px;
   background-color: #0A0908;
 }
 
-.dashboard-btn p {
+.login-btn p {
     color: white;
-    font-size: 1.5rem;
-    margin-bottom: 0;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 .db-img {
