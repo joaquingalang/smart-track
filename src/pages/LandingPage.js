@@ -26,7 +26,7 @@ function LandingPage() {
             <div className="content">
                 <h1 className="title-lg tilt-warp-regular">Smart Track: <br/> Your Gateway to Smarter Records</h1>
                 <p className="body-md delius-regular">Manage your data with ease using SmartTrack — a streamlined system for adding, editing, deleting, and reporting records in one intuitive dashboard. Designed for efficiency, built for clarity.</p>
-                <button className="dashboard-btn delius-regular">
+                <button onClick={() => navigate("/dashboard")} className="dashboard-btn delius-regular">
                     <p>Go to Dashboard</p>
                 </button>
             </div>
