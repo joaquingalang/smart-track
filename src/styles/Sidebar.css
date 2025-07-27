@@ -1,0 +1,76 @@
+.sidebar {
+    margin: 25px;
+    grid-row: 1 / span 20;
+    background-color: #0A0908;
+    border-radius: 60px;
+}
+
+.sidebar-content {
+    margin: 46px;
+}
+
+.greeting {
+    color: #EAE0D5;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.label {
+    color: rgba(234, 239, 211, 0.71);
+    font-size: 1rem;
+}
+
+.report-dashboard {
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.report-dashboard img {
+    width: 26px;
+    height: 26px;
+}
+
+.report-dashboard p {
+    margin: 3px 0px 0px 5px;
+    font-size: 1rem;
+    color: #EAE0D5;
+}
+
+.crud-option {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: 15px;
+    margin-bottom: 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+.crud-option img {
+    width: 26px;
+    height: 26px;
+}
+
+.crud-option p {
+    color: #EAE0D5;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 0;
+    margin-left: 1.25rem;
+}
+
+.selected {
+    background-color: #6490A6;
+}
+
+.selected img {
+    filter: invert(100%);
+}
+
+.selected p {
+    color: black;
+}

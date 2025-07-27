@@ -1,0 +1,11 @@
+.dashboard {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 332px repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.box {
+    background-color: aliceblue;
+    border: 1px solid black;
+}

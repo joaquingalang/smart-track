@@ -14,29 +14,23 @@ function LandingPage() {
 
   return (
     <div>
-      <div className="db-img">
-        <img src={databaseImg}></img>
-      </div>
-      <div className="blue-asterisk">
-        <img src={blueAsteriskImg}></img>
-      </div>
-      <div className="brown-squiggle">
-        <img src={brownSquiggle}></img>
-      </div>
-      <div className="content">
-        <h1 className="title-lg tilt-warp-regular">
-          Smart Track: <br /> Your Gateway to Smarter Records
-        </h1>
-        <p className="body-md borel-regular">
-          Manage your data with ease using SmartTrack — a streamlined system for
-          adding, editing, deleting, and reporting records in one intuitive
-          dashboard. Designed for efficiency, built for clarity.
-        </p>
-        <button className="dashboard-btn borel-regular" onClick={navigateToLogin}>
-          <p>Go to Dashboard</p>
-        </button>
-      </div>
-    </div>
+            <div className="db-img">
+                <img src={databaseImg}></img>
+            </div>
+            <div className="blue-asterisk">
+                <img src={blueAsteriskImg}></img>
+            </div>
+            <div className="brown-squiggle">
+                <img src={brownSquiggle}></img>
+            </div>
+            <div className="content">
+                <h1 className="title-lg tilt-warp-regular">Smart Track: <br/> Your Gateway to Smarter Records</h1>
+                <p className="body-md delius-regular">Manage your data with ease using SmartTrack — a streamlined system for adding, editing, deleting, and reporting records in one intuitive dashboard. Designed for efficiency, built for clarity.</p>
+                <button className="dashboard-btn delius-regular">
+                    <p>Go to Dashboard</p>
+                </button>
+            </div>
+        </div>
   );
 }
 
