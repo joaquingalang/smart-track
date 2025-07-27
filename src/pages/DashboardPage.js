@@ -1,6 +1,10 @@
 import '../styles/DashboardPage.css';
 import Sidebar from "../components/Sidebar";
 import { useState } from 'react';
+import DashboardView from './DashboardView';
+import AddView from './AddView';
+import EditView from './EditView';
+import DeleteView from './DeleteView';
 
 function DashboardPage() {
 
@@ -10,16 +14,27 @@ function DashboardPage() {
         setSelectedView(view);
     }
 
+    function renderView(view) {
+        switch (view) {
+            case "dashboard":
+                return <DashboardView></DashboardView>;
+            case "add":
+                return <AddView></AddView>;
+            case "edit":
+                return <EditView></EditView>;
+            case "delete":
+                return <DeleteView></DeleteView>;
+            default:
+                return null;
+        }
+    }
+
     return (
         <div className="dashboard">
             <Sidebar view={selectedView} onSelect={handleClick}></Sidebar>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
+            <div className="content">
+                {renderView(selectedView)}
+            </div>
         </div>
     );
 }
