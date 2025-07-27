@@ -4,10 +4,15 @@
     grid-column: 1 / 2;
     background-color: #0A0908;
     border-radius: 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-content {
     margin: 46px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .greeting {
@@ -74,4 +79,10 @@
 
 .selected p {
     color: black;
+}
+
+.logout-option {
+    margin: 46px;
+    margin-top: auto;
+    /* Optional: add more spacing or styling if needed */
 }

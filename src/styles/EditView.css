@@ -48,6 +48,16 @@
   padding-bottom: 0.5rem;
 }
 
+.table-body-max {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .table-body::-webkit-scrollbar {
   width: 8px;
 }
