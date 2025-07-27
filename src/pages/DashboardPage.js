@@ -32,9 +32,11 @@ function DashboardPage() {
     return (
         <div className="dashboard">
             <Sidebar view={selectedView} onSelect={handleClick}></Sidebar>
-            <div className="content">
+
+            <div className="view-content">
                 {renderView(selectedView)}
-            </div>
+            </div>                                             
+
         </div>
     );
 }
