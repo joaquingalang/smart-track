@@ -1,6 +1,7 @@
 .sidebar {
     margin: 25px;
     grid-row: 1 / span 20;
+    grid-column: 1 / 2;
     background-color: #0A0908;
     border-radius: 60px;
 }
