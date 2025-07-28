@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "department": "BS Computer Science",
+    "position": "Software Developer"
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "department": "BS Information Technology",
+    "position": "Frontend Engineer"
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "department": "BS Computer Science",
+    "position": "Backend Developer"
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "department": "BS Information Systems",
+    "position": "QA Analyst"
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "department": "BS Computer Science",
+    "position": "DevOps Engineer"
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "department": "BS Information Technology",
+    "position": "Full Stack Developer"
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "department": "BS Computer Science",
+    "position": "UI/UX Designer"
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "department": "BS Information Systems",
+    "position": "Project Manager"
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "department": "BS Computer Science",
+    "position": "Software Developer"
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "department": "BS Information Technology",
+    "position": "Business Analyst"
+  }
+]
