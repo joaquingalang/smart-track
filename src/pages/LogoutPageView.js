@@ -4,8 +4,9 @@ import "../styles/LogoutPage.css"
 function LogoutPageView(){
     const navigate = useNavigate();
 
-    const handleLogout = () =>{
-        //To add navigation to Landing Page
+    const navigateToLanding = (e) =>{
+       e.preventDefault();
+        navigate("/");
     };
 
     const handleCancel = () => {
@@ -20,7 +21,7 @@ function LogoutPageView(){
             </div>
 
             <div className="buttons">
-                <button className="logout-button" onClick={handleLogout}>Yes, Log Out</button>
+                <button className="logout-button" onClick={navigateToLanding}>Yes, Log Out</button>
                 <button className="cancel-button" onClick={handleCancel}>Cancel</button>
             </div>
         </div>
