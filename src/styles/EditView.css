@@ -167,6 +167,10 @@
   background-color: #4a6570;
 }
 
+.m-0 {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
