@@ -8,15 +8,15 @@ function EditView() {
   const [selectedEmployee, setSelectedEmployee] = useState(null);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('http://localhost:5000/api/employees')
       .then((res) => res.json())
       .then((data) =>
         setEmployees(
           data.map((user) => ({
             id: user.id,
             name: user.name,
-            department: 'BS Computer Science',
-            position: 'Software Developer',
+            department: user.department,
+            position: user.position,
           }))
         )
       );
@@ -32,16 +32,27 @@ function EditView() {
   };
 
   const handleUpdate = () => {
-    setEmployees((prev) =>
-      prev.map((emp) =>
-        emp.id === selectedEmployee.id ? selectedEmployee : emp
-      )
-    );
-    setSelectedEmployee(null);
+    fetch('http://localhost:5000/api/employees/edit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(selectedEmployee)
+    })
+      .then(res => res.json())
+      .then(data => {
+        setEmployees(
+          data.map((user) => ({
+            id: user.id,
+            name: user.name,
+            department: user.department,
+            position: user.position,
+          }))
+        );
+        setSelectedEmployee(null);
+      });
   };
 
   return (
-    <div class="container">
+    <div className="container">
       <h1>Edit Record</h1>
 
       <EditRecordTable 

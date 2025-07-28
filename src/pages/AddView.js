@@ -2,7 +2,7 @@ import "../styles/AddView.css";
 import "../styles/Fonts.css";
 import { useState, useEffect } from "react";
 
-const API_URL = "https://jsonplaceholder.typicode.com/users";
+const API_URL = "http://localhost:5000/api/employees";
 
 function AddView() {
   const [users, setUsers] = useState([]);
@@ -29,7 +29,7 @@ function AddView() {
       setUsers(data);
       // Find the max ID and set the next available ID
       const maxId = data.reduce((max, user) => (user.id > max ? user.id : max), 0);
-    setNextEmployeeId(maxId + 1);
+      setNextEmployeeId(maxId + 1);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -38,62 +38,60 @@ function AddView() {
   };
 
   // ---------- POST: Add new user ----------
-  const addUser = async () => {
-  try {
-    const res = await fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: nextEmployeeId,   // Include Employee ID
-        name: newUserName,
-        department: department,
-        position: position,
-      }),
-    });
-    const newUser = await res.json();
-    newUser.id = nextEmployeeId; // Ensure local ID is set
-    setUsers((prev) => [...prev, newUser]);
-    setNextEmployeeId(prevId => prevId + 1);
-    setNewUserName("");
-    setDepartment("");
-    setPosition("");
-  } catch (err) {
-    alert("Failed to add user.");
-  }
-};
+  const addUser = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`${API_URL}/add`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: nextEmployeeId,
+          name: newUserName,
+          department: department,
+          position: position,
+        }),
+      });
+      const updatedUsers = await res.json();
+      setUsers(updatedUsers);
+      setNextEmployeeId(prevId => prevId + 1);
+      setNewUserName("");
+      setDepartment("");
+      setPosition("");
+    } catch (err) {
+      alert("Failed to add user.");
+    }
+  };
 
   return (
-    <div class="label_view delius-regular">
+    <div className="label_view delius-regular">
       <h1>Add Record</h1>
-      <div class="input_view">
-        <div class=""></div>
+      <div className="input_view">
         <h2>Please Input Details</h2>
-        <div class="input_details">
-          <form>
+        <div className="input_details">
+          <form onSubmit={addUser}>
             <h3>Name</h3>
             <input
               value={newUserName}
               onChange={(e) => setNewUserName(e.target.value)}
-            ></input>
-          </form>
-          <form>
+              required
+            />
             <h3>Department</h3>
             <input
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
-            ></input>
-          </form>
-          <form>
+              required
+            />
             <h3>Position</h3>
             <input
               value={position}
               onChange={(e) => setPosition(e.target.value)}
-            ></input>
+              required
+            />
+            <button className="delius-regular" type="submit">
+              Add
+            </button>
           </form>
         </div>
-        <button class="delius-regular" onClick={addUser}>
-          Add
-        </button>
       </div>
     </div>
   );

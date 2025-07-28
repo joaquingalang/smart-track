@@ -7,15 +7,15 @@ function DeleteView() {
   const [selectedIds, setSelectedIds] = useState([]);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('http://localhost:5000/api/employees')
       .then((res) => res.json())
       .then((data) =>
         setEmployees(
-          data.map((user, index) => ({
-            id: index + 1,
+          data.map((user) => ({
+            id: user.id,
             name: user.name,
-            department: 'BS Computer Science',
-            position: 'Software Developer',
+            department: user.department,
+            position: user.position,
           }))
         )
       );
@@ -30,10 +30,23 @@ function DeleteView() {
   };
 
   const handleDelete = () => {
-    const remaining = employees.filter((emp) => !selectedIds.includes(emp.id));
-    const renumbered = remaining.map((emp, idx) => ({ ...emp, id: idx + 1 }));
-    setEmployees(renumbered);
-    setSelectedIds([]);
+    fetch('http://localhost:5000/api/employees/delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ids: selectedIds })
+    })
+      .then(res => res.json())
+      .then(data => {
+        setEmployees(
+          data.employees.map((user) => ({
+            id: user.id,
+            name: user.name,
+            department: user.department,
+            position: user.position,
+          }))
+        );
+        setSelectedIds([]);
+      });
   };
 
   return (
@@ -51,10 +64,10 @@ function DeleteView() {
 
       <div className="selected-count-bar">
         <span className="selected-count"> {selectedIds.length} selected </span>
-        </div>
-        <div className="bottom-bar">
-            <button onClick={handleDelete} className="delete-btn" disabled={selectedIds.length === 0}> Delete Record/s </button>
-            </div>
+      </div>
+      <div className="bottom-bar">
+        <button onClick={handleDelete} className="delete-btn" disabled={selectedIds.length === 0}> Delete Record/s </button>
+      </div>
     </div>
   );
 }

@@ -7,15 +7,15 @@ function DashboardView() {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('http://localhost:5000/api/employees')
       .then((res) => res.json())
       .then((data) =>
         setEmployees(
           data.map((user) => ({
             id: user.id,
             name: user.name,
-            department: 'BS Computer Science',
-            position: 'Software Developer',
+            department: user.department,
+            position: user.position,
           }))
         )
       );
