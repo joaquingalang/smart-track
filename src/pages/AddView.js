@@ -46,8 +46,8 @@ function AddView() {
       body: JSON.stringify({
         id: nextEmployeeId,   // Include Employee ID
         name: newUserName,
-        department,
-        position,
+        department: department,
+        position: position,
       }),
     });
     const newUser = await res.json();
