@@ -1,0 +1,82 @@
+.main-container{
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.headers{
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #4d3829;
+}
+
+.sub-heading{
+    font-size: 1rem;
+    color: #a98d7b;
+    margin-bottom: 2rem;
+}
+
+.logout-header{
+    color: #5E503F;
+    font-size: 120px;
+    font-family: "Tilt Warp"
+}
+
+.sub-heading{
+    font-family: "Delius Swash Caps", cursive;
+    color: #5E503F;
+    font-size: 2rem;
+}
+
+.logout-button{
+    font-size: 1.2rem;
+    padding: 1rem 7rem;
+    border-radius: 15px;
+    background-color: #5a3d2b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Delius Swash Caps", cursive;
+}
+
+.cancel-button{
+    font-size: 1.2rem;
+    padding: 1rem 9rem;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #5a3d2b;
+    border: 2px solid #5a3d2b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Delius Swash Caps", cursive;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .logout-header {
+    font-size: 2.5rem;
+  }
+
+  .logout-button,
+  .cancel-button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
