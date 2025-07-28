@@ -5,6 +5,7 @@ import DashboardView from './DashboardView';
 import AddView from './AddView';
 import EditView from './EditView';
 import DeleteView from './DeleteView';
+import LogoutPageView from './LogoutPageView';
 
 function DashboardPage() {
 
@@ -24,6 +25,8 @@ function DashboardPage() {
                 return <EditView></EditView>;
             case "delete":
                 return <DeleteView></DeleteView>;
+            case "logout":
+                return <LogoutPageView></LogoutPageView>;
             default:
                 return null;
         }
