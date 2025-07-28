@@ -18,7 +18,7 @@ const EditRecordTable = ({ employees, onEditClick }) => {
             <span>{emp.name}</span>
             <span>{emp.department}</span>
             <span>{emp.position}</span>
-            <button onClick={() => onEditClick(emp)}>✎</button>
+            <button className="m-0" onClick={() => onEditClick(emp)}>✎</button>
           </div>
         ))}
       </div>
