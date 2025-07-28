@@ -1,0 +1,47 @@
+.label_view {
+    margin: auto;
+}
+
+.input_view {
+    margin: auto;
+    text-align: center;
+    /* Remove min-height and max-height to let content determine size */
+}
+
+form {
+    text-align: start;
+}
+
+.input_details {
+    padding: 20px; 
+    margin: auto;
+    background-color: #D3DAB3;  
+    border-radius: 50px;
+    box-shadow: 3px 5px 10px gray;
+    max-width: 700px;
+    height: auto;
+}
+
+input {
+    border-radius: 20px;
+    background-color: #EAEFD3DE;
+    padding: 3%;
+    margin-bottom: 5px; 
+    width: 90%; 
+    border: none;
+    outline: none;
+}
+
+button {
+    margin-top: 30px;
+    box-shadow: 2px 2px 10px gray;
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 30px;
+    color: #D3DAB3;
+    background-color: #6490A6;
+    outline: none;
+    border: none;
+}
