@@ -5,12 +5,12 @@ import addIconImg from "../assets/add-icon.png";
 import editIconImg from "../assets/edit-icon.png";
 import deleteIconImg from "../assets/delete-icon.png";
 
-function Sidebar({view, onSelect}) {
+function Sidebar({view, onSelect, username}) {
 
     return (
         <div className="sidebar">
             <div className="sidebar-content">
-                <p className="greeting delius-regular">Hello, Joshua!</p>
+                <p className="greeting delius-regular">Hello, {username}!</p>
                 <p className="label delius-regular">General</p>
                 <div onClick={() => onSelect("dashboard")} className={"report-dashboard" + (view == "dashboard" ? " selected" : "")}>
                     <img src={boxIconImg} alt="Dashboard"/>

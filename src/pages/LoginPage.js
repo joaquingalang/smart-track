@@ -4,14 +4,37 @@ import { useNavigate } from "react-router-dom";
 import databaseImg from "../assets/database.png";
 import blueAsteriskImg from "../assets/blue-asterisk.png";
 import brownSquiggle from "../assets/brown-squiggle.png";
+import React, { useState } from "react";
 
 function LoginPage() {
   const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   function navigateToDashboard(e) {
     e.preventDefault();
-    navigate("/dashboard");
+    navigate("/dashboard", {state:{username}});
   }
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (!username || !email || !password) {
+      prompt("All fields are required.");
+      return;
+    }
+
+    if (
+      username === "STAdmin" &&
+      email === "smarttrack@gmail.com" &&
+      password === "ST@123456"
+    ) {
+      navigateToDashboard(e);
+    } else {
+      prompt("Invalid credentials. Please try again.");
+    }
+  };
 
   return (
     <div>
@@ -34,6 +57,8 @@ function LoginPage() {
             type="text"
             class="login-text-field body-md delius-regular"
             placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </form>
         <form>
@@ -41,6 +66,8 @@ function LoginPage() {
             type="text"
             class="login-text-field body-md delius-regular"
             placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </form>
         <form>
@@ -48,12 +75,14 @@ function LoginPage() {
             type="password"
             class="login-text-field body-md delius-regular"
             placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </form>
 
         <button
           className="login-btn delius-regular"
-          onClick={navigateToDashboard}
+          onClick={handleLogin}
         >
           <p>Log In</p>
         </button>
