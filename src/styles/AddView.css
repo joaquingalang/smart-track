@@ -2,9 +2,21 @@
     margin: auto;
 }
 
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+input {
+    font-family: "Delius Swash Caps", cursive;
+}
+
 .input_view {
     margin: auto;
     text-align: center;
+    
     /* Remove min-height and max-height to let content determine size */
 }
 

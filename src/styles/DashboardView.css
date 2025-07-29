@@ -6,3 +6,43 @@
     display: flex;
     justify-content: space-between;
 }
+
+.charts-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  width: 45%;
+  margin: 1rem 0;
+}
+
+/* Only affect RecordTable inside DashboardView */
+.table-scroll-container .table-body-max {
+  max-height: 200px; /* enough for ~5 rows */
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Optional: match scrollbar style */
+.table-scroll-container .table-body-max::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-scroll-container .table-body-max::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.table-scroll-container .table-body-max::-webkit-scrollbar-thumb {
+  background: #6b8a96;
+  border-radius: 4px;
+}
+
+.table-scroll-container .table-body-max::-webkit-scrollbar-thumb:hover {
+  background: #5a7580;
+}
+

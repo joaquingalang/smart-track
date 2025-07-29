@@ -58,5 +58,17 @@
     "name": "Clementina DuBuque",
     "department": "BS Information Technology",
     "position": "Business Analyst"
+  },
+  {
+    "id": 11,
+    "name": "Howard Mendell",
+    "department": "BS Information Technology",
+    "position": "Frontend Engineer"
+  },
+  {
+    "id": 12,
+    "name": "John Lloyd Cruz",
+    "department": "BS Information Technology",
+    "position": "Frontend Engineer"
   }
 ]

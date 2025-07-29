@@ -5,6 +5,7 @@ import DashboardView from './DashboardView';
 import AddView from './AddView';
 import EditView from './EditView';
 import DeleteView from './DeleteView';
+import ReportView from './ReportView';
 import LogoutPageView from './LogoutPageView';
 
 function DashboardPage() {
@@ -19,6 +20,8 @@ function DashboardPage() {
         switch (view) {
             case "dashboard":
                 return <DashboardView></DashboardView>;
+            case "report":
+                return <ReportView></ReportView>;
             case "add":
                 return <AddView></AddView>;
             case "edit":
