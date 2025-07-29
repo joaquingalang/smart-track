@@ -14,7 +14,11 @@ function Sidebar({view, onSelect}) {
                 <p className="label delius-regular">General</p>
                 <div onClick={() => onSelect("dashboard")} className={"report-dashboard" + (view == "dashboard" ? " selected" : "")}>
                     <img src={boxIconImg} alt="Dashboard"/>
-                    <p className="delius-regular">Report Dashboard</p>
+                    <p className="delius-regular">Dashboard</p>
+                </div>
+                <div onClick={() => onSelect("report")} className={"report-dashboard" + (view == "report" ? " selected" : "")}>
+                    <img src={boxIconImg} alt="Report"/>
+                    <p className="delius-regular">Report</p>
                 </div>
                 <p className="label delius-regular">CRUD</p>
                 <div onClick={() => onSelect("add")} className={"crud-option" + (view == "add" ? " selected" : "")}>
