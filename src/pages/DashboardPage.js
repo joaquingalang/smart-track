@@ -7,10 +7,12 @@ import EditView from './EditView';
 import DeleteView from './DeleteView';
 import ReportView from './ReportView';
 import LogoutPageView from './LogoutPageView';
+import { useLocation } from "react-router-dom";
 
 function DashboardPage() {
-
     const [selectedView, setSelectedView] = useState("dashboard");
+    const location = useLocation();
+    const {username} = location.state || "Guest";
 
     function handleClick(view) {
         setSelectedView(view);
@@ -37,7 +39,7 @@ function DashboardPage() {
 
     return (
         <div className="dashboard">
-            <Sidebar view={selectedView} onSelect={handleClick}></Sidebar>
+            <Sidebar view={selectedView} onSelect={handleClick} username={username}></Sidebar>
 
             <div className="view-content">
                 {renderView(selectedView)}
